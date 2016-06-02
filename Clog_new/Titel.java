@@ -1,5 +1,6 @@
 public class Titel {
+    public String titel;
     public Titel(String titel) {
-        new Titel(titel);
+        this.titel = titel;
     }
 }

@@ -1,5 +1,6 @@
 public class Content {
+    public String text;
     public Content(String text) {
-        new Content(text);
+        this.text = text;
     }
 }

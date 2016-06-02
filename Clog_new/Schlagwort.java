@@ -1,5 +1,6 @@
 public class Schlagwort {
+    public String schlagwort;
     public Schlagwort(String schlagwort) {
-        new Schlagwort(schlagwort);
+        this.schlagwort = schlagwort;
     }
 }

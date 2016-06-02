@@ -1,5 +1,6 @@
 public class Datum {
-    public Datum(int d, int m, int y) {
-        new Datum(d, m, y);
+    public String datum;
+    public Datum(String datum) {
+        this.datum = datum;
     }
 }

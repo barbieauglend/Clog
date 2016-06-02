@@ -3,7 +3,7 @@ public class Text {
     Name vorname = new Name("");
     Name nachname= new Name("");
     Wohnort wohnort= new Wohnort("");
-    Datum datum= new Datum (1,1,2000);
+    Datum datum= new Datum ("");
     Titel titel= new Titel ("");
     Content text= new Content("");
     Schlagwort schlagwort= new Schlagwort("");    

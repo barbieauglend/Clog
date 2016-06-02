@@ -1,5 +1,6 @@
 public class Wohnort {
+    public String wohnort;
     public Wohnort(String wohnort) {
-        new Wohnort(wohnort);
+        this.wohnort = wohnort;
     }
 }
