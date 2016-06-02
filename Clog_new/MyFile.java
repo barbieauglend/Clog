@@ -5,8 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.PrintStream;
 
 public class MyFile {
 
@@ -14,6 +13,7 @@ public class MyFile {
     FileWriter fw;
     BufferedReader br;
     BufferedWriter bw;
+    PrintStream out;
 
     public MyFile(){
         try {
@@ -21,29 +21,28 @@ public class MyFile {
             fr = new FileReader("blog.txt");
             bw = new BufferedWriter(fw);
             br = new BufferedReader(fr);
+            out = new PrintStream(System.out);
             
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(MyFile.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (FileNotFoundException e) {
+                    out.println("File Not Found");
         } catch (IOException ex) {
-            Logger.getLogger(MyFile.class.getName()).log(Level.SEVERE, null, ex);
+            out.println("IO");
         }
-
-    }
-
+}
     public void save(Text text) {
         try {
             bw.write(text.toSave());
             bw.flush();
         } catch (IOException ex) {
-            Logger.getLogger(MyFile.class.getName()).log(Level.SEVERE, null, ex);
+            out.println("IO");
         }
     }
-
     public String load() {
         try {
-            return br.readLine();
+            while((zeile = br.readLine()) =! null){
+            out.println(text);}
         } catch (IOException ex) {
-            Logger.getLogger(MyFile.class.getName()).log(Level.SEVERE, null, ex);
+            out.println("IO");
         }
         return "fehler";
     }

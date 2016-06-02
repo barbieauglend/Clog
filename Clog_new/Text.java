@@ -3,35 +3,35 @@ public class Text {
     Name vorname = new Name("");
     Name nachname= new Name("");
     Wohnort wohnort= new Wohnort("");
-    Datum datum= new Datum ("");
+    MyDatum datum= new MyDatum ("");
     Titel titel= new Titel ("");
-    Content text= new Content("");
+    Content content = new Content("");
     Schlagwort schlagwort= new Schlagwort("");    
     
-    public Text(){};
+    public Text(){
+    };
     
     public Text(Name vornamein, Name nachnamein,
             Wohnort wohnortin,
-            Datum datumin,
+            MyDatum datumin,
             Titel titelin,
-            Content textin) {
+            Content contentin) {
         vorname = vornamein;
         nachname = nachnamein;
         wohnort = wohnortin;
         datum = datumin;
         titel = titelin;
-        text = textin;
-        
+        content = contentin;        
     }
 
-    @Override
-    public String toString() {
-        return "" + vorname + "\n" + nachname + "\n" + wohnort + "\n" + datum + "\n" + titel + "\n" + text+ "\n" + schlagwort;
+//    @Override
+    public String toString(Text text) {
+        return text.toString();
     }
     public String toSave() {
-        return "" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
+        return ull;//"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
     }
-    public void setSchlagwort(Schlagwort schlagwortin) {
+    /*public void setSchlagwort(Schlagwort schlagwortin) {
         schlagwort = schlagwortin;
-    }
+    }*/
 }

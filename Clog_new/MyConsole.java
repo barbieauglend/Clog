@@ -27,4 +27,10 @@ public class MyConsole {
         Scanner scanInput = new Scanner(System.in);
         return scanInput.nextLine();
     }
+    
+    public void TextOutput() {
+        out.println("Bitte geben sie in der Reihenfolge");
+        out.println("Vorname, Nachname, Wohnort, Datum (dd.mm.yyyy)");
+        out.println(", Titel und dann den Text ein: ");
+        }
 }

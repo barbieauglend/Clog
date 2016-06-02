@@ -1,12 +1,22 @@
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Logic {
 
     MyConsole myConsole;
     MyFile myFile;
+    BlogController blogController;
     Text text;
+    ArrayList<Text> Entries;
 
     public Logic() {
         myConsole = new MyConsole();
         myFile = new MyFile();
+        blogController = new BlogController();
         text = new Text();
     }
 
@@ -35,8 +45,9 @@ public class Logic {
     }
 
     private void erzeugen() {
-
-        text = new Text(myConsole.input(),
+        myConsole.TextOutput();
+        blogController.erzeugen();
+        /*text = new Text(myConsole.input(),
                 myConsole.input(),
                 myConsole.input(),
                 myConsole.input(),
@@ -46,7 +57,7 @@ public class Logic {
         do {
             temp = temp + myConsole.input();
         } while (!temp.contains("exit"));
-        text.setSchlagwort(temp);
+        text.setSchlagwort(temp);*/
 
     }
 
@@ -54,18 +65,21 @@ public class Logic {
         myConsole.output(text.toString());
     }
 
-    private void laden() {
-        String load = myFile.load();
+    public void laden(File file) throws FileNotFoundException {
+        	Scanner readSource = new Scanner(file);
+			}
+	    
+        /*String load = myFile.load();
         System.out.println("fff"+load);
         String[] loadArray = load.split(":");
         if(loadArray[0] != null){
             text = new Text(loadArray[0],loadArray[1],loadArray[2],loadArray[3],loadArray[4],loadArray[5]);
             text.setSchlagwort(loadArray[6]);
-        } 
+        }*/ 
     }
 
     private void speichern() {
-        myFile.save(text);
+        laden("blog.txt");
+        //TODO MyFile.save(text);
+        out.println("\n" + "Der Text wurde gespeichert/");
     }
-
-}
