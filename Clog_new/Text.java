@@ -15,13 +15,15 @@ public class Text {
             Wohnort wohnortin,
             MyDatum datumin,
             Titel titelin,
-            Content contentin) {
+            Content contentin, 
+            Schlagwort schlagwortin) {
         vorname = vornamein;
         nachname = nachnamein;
         wohnort = wohnortin;
         datum = datumin;
         titel = titelin;
-        content = contentin;        
+        content = contentin; 
+        schlagwort = schlagwortin;
     }
 
 //    @Override
@@ -30,9 +32,10 @@ public class Text {
     }
     public String toSave(Text textT) {
         String text = toString(textT);
-        return text;//"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
+        return text;
+        //"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
     }
-    /*public void setSchlagwort(Schlagwort schlagwortin) {
+    public void setSchlagwort(Schlagwort schlagwortin) {
         schlagwort = schlagwortin;
-    }*/
+    }
 }

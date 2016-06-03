@@ -51,18 +51,6 @@ public class Logic {
     private void erzeugen() {
         myConsole.TextOutput();
         blogController.erzeugen();
-        /*text = new Text(myConsole.input(),
-                myConsole.input(),
-                myConsole.input(),
-                myConsole.input(),
-                myConsole.input(),
-                myConsole.input());
-        String temp = "";
-        do {
-            temp = temp + myConsole.input();
-        } while (!temp.contains("exit"));
-        text.setSchlagwort(temp);*/
-
     }
 
     private void ausgeben() {

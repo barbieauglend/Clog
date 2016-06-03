@@ -22,8 +22,15 @@ public class BlogController{
     datum = new MyDatum(myConsole.input());
     titel = new Titel(myConsole.input());
     content = new Content(myConsole.input());
-    text = new Text(vorname, nachname, wohnort, datum, titel, content);
+    this.schlagwortInput();
+    text = new Text(vorname, nachname, wohnort, datum, titel, content, schlagwort);
     
     return text;
+    }
+    
+    public void schlagwortInput(){
+        do {
+            schlagwort = new Schlagwort((schlagwort.toString()) + myConsole.input());
+        } while (!schlagwort.schlagwort.contains("exit"));
     }
 }
