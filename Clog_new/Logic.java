@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Logic {
 
@@ -12,15 +14,17 @@ public class Logic {
     BlogController blogController;
     Text text;
     ArrayList<Text> Entries;
+    File file;
 
     public Logic() {
         myConsole = new MyConsole();
         myFile = new MyFile();
         blogController = new BlogController();
         text = new Text();
+        file = new File("blog.txt");
     }
 
-    public void gogogo() {
+    public void gogogo() throws FileNotFoundException, IOException {
         while (true) {
             myConsole.FirstOutput();          
             switch (myConsole.inputFirst()) {
@@ -31,7 +35,7 @@ public class Logic {
                     ausgeben();
                     break;
                 case "3":
-                    laden();
+                    laden(file);
                     break;
                 case "4":
                     speichern();
@@ -76,10 +80,10 @@ public class Logic {
             text = new Text(loadArray[0],loadArray[1],loadArray[2],loadArray[3],loadArray[4],loadArray[5]);
             text.setSchlagwort(loadArray[6]);
         }*/ 
+    private void speichern() throws IOException {
+        //laden(file);
+        FileWriter schreiber = new FileWriter(file);
+        schreiber.write(text.toString());
+        schreiber.close();
     }
-
-    private void speichern() {
-        laden("blog.txt");
-        //TODO MyFile.save(text);
-        out.println("\n" + "Der Text wurde gespeichert/");
-    }
+}

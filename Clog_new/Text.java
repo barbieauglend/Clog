@@ -28,8 +28,9 @@ public class Text {
     public String toString(Text text) {
         return text.toString();
     }
-    public String toSave() {
-        return ull;//"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
+    public String toSave(Text textT) {
+        String text = toString(textT);
+        return text;//"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
     }
     /*public void setSchlagwort(Schlagwort schlagwortin) {
         schlagwort = schlagwortin;

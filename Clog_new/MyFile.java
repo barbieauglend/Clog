@@ -24,27 +24,28 @@ public class MyFile {
             out = new PrintStream(System.out);
             
         } catch (FileNotFoundException e) {
-                    out.println("File Not Found");
+                    e.printStackTrace();
         } catch (IOException ex) {
-            out.println("IO");
+            ex.printStackTrace();
         }
 }
     public void save(Text text) {
         try {
-            bw.write(text.toSave());
+            bw.write(text.toSave(text));
             bw.flush();
         } catch (IOException ex) {
-            out.println("IO");
+            ex.printStackTrace();
         }
     }
     public String load() {
-        try {
-            while((zeile = br.readLine()) =! null){
-            out.println(text);}
-        } catch (IOException ex) {
-            out.println("IO");
+        String zeile;
+        try{
+            while ((zeile = br.readLine()) != null) {
+          out.println(zeile);}}
+        catch (IOException ex) {
+            ex.printStackTrace();
         }
-        return "fehler";
+        return "FAILLLLLLLL!!!";
     }
 }
 
