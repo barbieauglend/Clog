@@ -1,5 +1,4 @@
 public class Text {
-
     Name vorname = new Name("");
     Name nachname= new Name("");
     Wohnort wohnort= new Wohnort("");
@@ -7,10 +6,8 @@ public class Text {
     Titel titel= new Titel ("");
     Content content = new Content("");
     Schlagwort schlagwort= new Schlagwort("");    
-    
     public Text(){
     };
-    
     public Text(Name vornamein, Name nachnamein,
             Wohnort wohnortin,
             MyDatum datumin,
@@ -25,15 +22,9 @@ public class Text {
         content = contentin; 
         schlagwort = schlagwortin;
     }
-
-//    @Override
-    public String toString(Text text) {
-        return text.toString();
-    }
     public String toSave(Text textT) {
-        String text = toString(textT);
-        return text;
-        //"" + vorname + ":" + nachname + ":" + wohnort + ":" + datum + ":" + titel + ":" + text+ ":" + schlagwort;
+        return "" + vorname.toString() + ":" + nachname.toString() + ":" + wohnort.toString() + 
+                ":" + datum.toString() + ":" + titel.toString() + ":" + content.toString() + ":" + schlagwort.toString();
     }
     public void setSchlagwort(Schlagwort schlagwortin) {
         schlagwort = schlagwortin;

@@ -3,4 +3,7 @@ public class Schlagwort {
     public Schlagwort(String schlagwort) {
         this.schlagwort = schlagwort;
     }
+    public String toString(){
+    return schlagwort;
+    }
 }

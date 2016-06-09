@@ -1,13 +1,14 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.*;
-import java.io.IOException;
+import java.io.*;
 
 public class Logic {
     MyConsole myConsole;
+    MyFile myFile;
+    File file;
     Text text;
-      public Logic() {
+    public Logic() {
         myConsole = new MyConsole();
+        myFile = new MyFile();
+        file = new File("blog.txt");
         text = new Text();
     }
     public void gogogo() throws FileNotFoundException, IOException {
@@ -15,17 +16,17 @@ public class Logic {
             myConsole.FirstOutput();          
             switch (myConsole.inputFirst()) {
                 case "1":
-                    text.erzeugen();
+                    myFile.erzeugen();
                     break;
                 case "2":
-                    text.laden();
-                    text.ausgeben();
+                    myFile.laden(file);
+                    myFile.ausgeben();
                     break;
                 case "3":
-                    text.laden();
+                    myFile.laden(file);
                     break;
                 case "4":
-                    text.speichern();
+                    myFile.speichern(text);
                     break;
                 case "5":
                     System.exit(0);

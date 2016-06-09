@@ -3,4 +3,7 @@ public class Titel {
     public Titel(String titel) {
         this.titel = titel;
     }
+    public String toString(){
+        return titel;
+    }
 }

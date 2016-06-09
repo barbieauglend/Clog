@@ -29,8 +29,12 @@ public class MyConsole {
     }
     
     public void TextOutput() {
-        out.println("Bitte geben sie in der Reihenfolge");
+        out.println("Bitte geben Sie in der Reihenfolge und mit 'Eingabe' getrennt");
         out.println("Vorname, Nachname, Wohnort, Datum (dd.mm.yyyy)");
         out.println(", Titel und dann den Text ein: ");
         }
+    
+    public void Nachfrage(){
+        out.println("Bitte geben Sie ein Schlagwort ein");
+    }
 }
