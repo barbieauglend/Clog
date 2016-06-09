@@ -14,9 +14,7 @@ falschen Eingabe wird das Menü wiederholt.
 Vorname, Nachname, Wohnort, Datum, Titel, Text, Schlagworte (hier werden solange Texteingaben gelesen, 
 bis das eingegebene Schlagwort “exit” ist)
 
-2. Bei Eingabe einer 2 wird der Benutzer aufgefordert ein Schlagwort einzugeben, es wer den dann alle Einträge der
-Eingabereihenfolge nach ausgegeben, die mit dem Schlagwort versehen wurden. Die Ausgabe soll alle
-Informationen beinhalten, die eingegeben wurden. 
+2. Bei Eingabe einer 2 werden  alle Einträge der Eingabereihenfolge nach ausgegeben, die mit dem Schlagwort versehen wurden. Die Ausgabe soll alle Informationen beinhalten, die eingegeben wurden. 
 
 3. Bei der Eingabe 3 wird das aktuelle Clog aus einer Datei auf der Festplatte gelesen. 
 
