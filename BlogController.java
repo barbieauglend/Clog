@@ -8,12 +8,12 @@ public class BlogController{
     File file;
   
     Name vorname = new Name("");
-    Name nachname= new Name("");
-    Wohnort wohnort= new Wohnort("");
-    MyDatum datum= new MyDatum ("");
-    Titel titel= new Titel ("");
-    Content content= new Content("");
-    Schlagwort schlagwort= new Schlagwort("");    
+    Name nachname = new Name("");
+    Wohnort wohnort = new Wohnort("");
+    MyDatum datum = new MyDatum ("");
+    Titel titel = new Titel ("");
+    Content content = new Content("");
+    Schlagwort schlagwort = new Schlagwort("");    
 
     public BlogController(){
         myConsole = new MyConsole();
