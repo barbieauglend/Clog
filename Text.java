@@ -1,13 +1,15 @@
 public class Text {
     Name vorname = new Name("");
-    Name nachname= new Name("");
-    Wohnort wohnort= new Wohnort("");
-    MyDatum datum= new MyDatum ("");
-    Titel titel= new Titel ("");
+    Name nachname = new Name("");
+    Wohnort wohnort = new Wohnort("");
+    MyDatum datum = new MyDatum ("");
+    Titel titel = new Titel ("");
     Content content = new Content("");
-    Schlagwort schlagwort= new Schlagwort("");    
+    Schlagwort schlagwort = new Schlagwort("");  
+    
     public Text(){
-    };
+    }
+    
     public Text(Name vornamein, Name nachnamein,
             Wohnort wohnortin,
             MyDatum datumin,
